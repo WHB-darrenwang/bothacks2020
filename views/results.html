@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            Cooking Recipes for Losers
+        </title>
+        <link rel = "stylesheet"  type="text/css" href = "/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+
+    <body onload="loadRecipes()">
+        <h1> results page</h1>
+        
+    </body>
+
+    <script>
+        function loadRecipes(){
+        console.log("hello there");
+        var results = "<%= results %>";
+        console.log(results);
+        
+        // for (var i = 0; i < results.length; i++){
+        //     console.log(results[i]);
+        //     var recipe = document.createElement("DIV");
+        //     recipe.className = "card"
+        //     recipe.innerHTML = "recipe";
+        //     document.body.appendChild(recipe);
+        // }
+        }
+
+        fetch('')
+            .then(response => response.json())
+            .then(data => console.log(data));
+    </script>
+
+</html>

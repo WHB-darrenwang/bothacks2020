@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Upload
+        </title>
+        <link rel = "stylesheet"  type="text/css" href = "/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1>
+            Have your own recipe? Upload it!
+        </h1>
+        <form method = "post" action = "/upload_recipe">
+            <div class="form-group">
+                <label for="dishName"> Name of the dish</label> </br>
+                <input type="text" class="form-control" name="dishName">
+                <label for="dishDescription"> Describe your dish </label> </br>
+                <textarea rows="3" class="form-control" name="dishDescription" maxlength="280"></textarea>
+                <small id="descriptionGuide" class="form-text text-muted"> Provide a short decription for your dish. Limited to 280 characters.</small> </br>
+                <label for="picture"> Upload a picture of your dish </label> </br>
+                <input type="file" class="form-control-file" id="picture" accept=".png, .jpg" onchange="loadFile(event)">
+                <img id="output"/>             
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="Vegetarian">
+                    <label class="custom-control-label" for="Vegetarian">Vegetarian</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="Vegan">
+                    <label class="custom-control-label" for="Vegan">Vegan</label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="Kosher">
+                <label class="custom-control-label" for="Kosher">Kosher </label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="Halal">
+                <label class="custom-control-label" for="Halal">Halal</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dishDescription"> List your ingredients</label> </br>
+                <textarea rows="3" class="form-control" name="ingredients"></textarea>
+                <label for="steps"> Describe the steps to make your dish</label> </br>
+                <textarea rows="3" class="form-control" name="steps" ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </body>
+    <script>
+        var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+    </script>
+</html>

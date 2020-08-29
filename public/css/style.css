@@ -1,0 +1,26 @@
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav li a:hover{
+    background-color: skyblue;
+    color: gold;
+}
+
