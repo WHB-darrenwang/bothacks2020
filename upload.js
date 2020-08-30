@@ -20,20 +20,20 @@ router.post('/upload_recipe', function(req, res){
     const inp_dishDescription = req.body.dishDescription;
     const inp_ingredients = req.body.ingredients;
     const inp_steps = req.body.steps;
-    var receipe_Data = {
+    var recipe_Data = {
         dish_Name : inp_dishName,
         dish_Description : inp_dishDescription,
         dish_ingredients : inp_ingredients,
         dish_steps : inp_steps
-    }; //json format information for the receipe
+    }; //json format information for the recipe
     console.log("connecting");
-    console.log('going to store ' + receipe_Data);
+    console.log('going to store ' + recipe_Data);
     client.connect(err => {
         if (err) throw err;
-        const collection = client.db(DB_NAME_LOGIN).collection("customized_Receipes");
-        collection.insertOne(receipe_Data, function(err, res) {
+        const collection = client.db(DB_NAME_LOGIN).collection("customized_Recipes");
+        collection.insertOne(recipe_Data, function(err, res) {
                 if(err) throw err;
-                console.log("Receipe has successfully registered.");
+                console.log("Recipe has successfully registered.");
         });
     });
     client.close();

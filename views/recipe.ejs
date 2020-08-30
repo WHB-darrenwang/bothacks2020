@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Recipe Details
+        </title>
+        <link rel = "stylesheet"  type="text/css" href = "/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4"><%=Result.title %></h1>
+            <hr class="my-4">
+            <h3 class="display-6">Author: <%=Result.sourceName %></h3>
+            <h3 class="display-6">Vegan: <%=Result.vegan%></h3>
+            <h3 class="display-6">Gluten free: <%=Result.glutenFree %></h3>
+            <h3 class="display-6">Prep time: <%= Result.readyInMinutes%></h3>
+            <img src="<%= Result.image %>">
+            <hr class="my-4">
+            <form action="<%=Result.sourceUrl%>">
+                <button type="submit" class="btn btn-primary">Recipe link</button>
+            </form>
+            <form action="/">
+                <button type="submit" class="btn btn-secondary">Home</button>
+            </form>
+          </div>
+
+    </body>
+</html>
