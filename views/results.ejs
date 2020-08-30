@@ -12,14 +12,14 @@
         <% console.log(Results)                                     %>
         <% for (var i = 0; i < Results.length - 1; i+=2) {          %>
         <div class="card-group">
-            <div style="width: 50%; float:left" class = "card-L">
+            <div style="width: 45%; float:left" class = "card-L">
                 <img src="<%= Results[i].image%>" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title"> <%= Results[i].title %></p>
                 </div>                    
             </div>
-
-            <div style="width: 50%; float:right" class = "card-R">
+            <div style="width: 10%" class = "gap-C"></div>    
+            <div style="width: 45%; float:right" class = "card-R">
                 <img src="<%= Results[i+1].image%>" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title"> <%= Results[i+1].title %></p>
