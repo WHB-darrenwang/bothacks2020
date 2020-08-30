@@ -7,21 +7,49 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     </head>
 
-    <body>
-        <div class = "nav">
-            <ul>
-                <li><a class= "active" href = "#home">Home</a></li>
-                <li><a href = "upload">Upload Receipe</a></li>
-            </ul>
-        </div>    
-        
-        <form method = "post" action = "/search_recipe" class = "search">
-            <input name = "input_dish" type = "text" placeholder = "Search for recipes">
-            <input type = "checkbox" id = "dbSearch" name = "dbSearch" value = "yes"> Search in Site's Databases?
-        </form> 
+    <body> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="jumbotron" id="jumbotron">
+            <h1 class="display-1 welcome"> BOTHACKS2020 </h1>
+            <h3 class="welcome"> Your one stop shop for recipes</h3>
+            <br>
+            <br>
+            <form method = "post" action = "/search_recipe" class = "search">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="community">
+                    <label class="custom-control-label welcome" for="customSwitch1"> Show community recipes only</label> <br> <br>
+                </div>
+                <input name = "input_dish" type = "search" class = "input-large" placeholder = "Search for recipes">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <br> <br>
+            <form action="https://github.com/rk9843/bothacks2020">
+                <button type="submit" class="btn btn-secondary">About</button>
+        </form>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
+    <!-- TODO: move to main css file-->
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"); /* TODO: edit path */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #jumbotron {
+            background-color: rgba(69, 69, 69, 0);
+            
+        }
+
+        .welcome {
+            color: rgb(255, 255, 255);
+        }
+    </style>
 </html>
