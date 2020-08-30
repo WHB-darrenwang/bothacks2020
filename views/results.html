@@ -15,8 +15,8 @@
     <script>
         function loadRecipes(){
         console.log("hello there");
-        var results = "<%= results %>";
-        console.log(results);
+        // var results = "<%= results %>";
+        // console.log(results);
         
         // for (var i = 0; i < results.length; i++){
         //     console.log(results[i]);
@@ -27,9 +27,8 @@
         // }
         }
 
-        fetch('')
-            .then(response => response.json())
-            .then(data => console.log(data));
+        fetch('/get_results')
+             .then(data => console.log(data));
     </script>
 
 </html>

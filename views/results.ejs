@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Cooking Recipes for Losers
+        </title>
+        <link rel = "stylesheet"  type="text/css" href = "/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1> Results Page</h1>
+        <% console.log(Results)                 %>
+        <% for (food in Results) {              %>
+        
+        <div class = "card"> 
+            <img src="<%= Results[food].image%>" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text"> <%= Results[food].title %></p>
+            </div>
+        </div>
+
+        <% }                                    %>
+    </body>
+    
+</html>

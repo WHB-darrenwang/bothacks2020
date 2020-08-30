@@ -21,7 +21,7 @@ router.get('/recipe/:food', function(req,res){
         if(response.error) throw new Error(response.error);
         else{
             results = response.body.results;
-            res.sendFile(__dirname + '/views/results.html', {results: results});
+            res.render(__dirname + '/views/results', {Results: results});
         }
     });
 });

@@ -5,8 +5,8 @@ const path = require('path');                               // provides path fun
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(8080);
-app.set('view engine', 'html');
+app.listen(3000);
+app.set('view engine', 'ejs');
 
 // Need to refactor mian.js (idk what it is use for)
 const main_random = require('./main.js');
