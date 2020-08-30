@@ -8,18 +8,28 @@
     </head>
 
     <body>
-        <h1> Results Page</h1>
-        <% console.log(Results)                 %>
-        <% for (food in Results) {              %>
-        
-        <div class = "card"> 
-            <img src="<%= Results[food].image%>" class="card-img-top">
-            <div class="card-body">
-                <p class="card-text"> <%= Results[food].title %></p>
+        <h1>Results Page</h1>
+        <% console.log(Results)                                     %>
+        <% for (var i = 0; i < Results.length - 1; i+=2) {          %>
+        <div class="card-group">
+            <div style="width: 50%; float:left" class = "card-L">
+                <img src="<%= Results[i].image%>" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= Results[i].title %></p>
+                </div>                    
+            </div>
+
+            <div style="width: 50%; float:right" class = "card-R">
+                <img src="<%= Results[i+1].image%>" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= Results[i+1].title %></p>
+                </div>                    
             </div>
         </div>
+        <% }                                                        %>
 
-        <% }                                    %>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
-    
 </html>
